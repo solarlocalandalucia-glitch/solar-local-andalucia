@@ -100,6 +100,7 @@ def page(rel, title, body, desc, current=""):
     titular = cfg["titular_nombre"] or '<span class="todo">[TITULAR PENDIENTE]</span>'
     nif = cfg["titular_nif"] or '<span class="todo">[NIF]</span>'
     dire = cfg["titular_direccion"] or '<span class="todo">[DIRECCIÓN]</span>'
+    robots = "" if cfg["titular_nombre"] else '<meta name="robots" content="noindex,nofollow">'
     inner = f"""
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Source+Sans+3:wght@400;600;700&display=swap">
 <link rel="stylesheet" href="{up}style.css">
@@ -111,11 +112,11 @@ def page(rel, title, body, desc, current=""):
 <span>Titular: {titular} · {nif} · {dire} · {esc(cfg['contact_email'])}</span>
 </div></footer>"""
     if PREVIEW and rel == "index.html":
-        return f'<title>{esc(title)}</title>\n<meta name="description" content="{esc(desc)}">' + inner
+        return f'<title>{esc(title)}</title>\n<meta name="description" content="{esc(desc)}">{robots}' + inner
     return (
         '<!doctype html><html lang="es"><head><meta charset="utf-8">'
         '<meta name="viewport" content="width=device-width,initial-scale=1">'
-        f'<title>{esc(title)}</title><meta name="description" content="{esc(desc)}"></head><body>{inner}</body></html>'
+        f'<title>{esc(title)}</title><meta name="description" content="{esc(desc)}">{robots}</head><body>{inner}</body></html>'
     )
 
 

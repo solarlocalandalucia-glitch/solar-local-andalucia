@@ -97,9 +97,8 @@ def page(rel, title, body, desc, current=""):
     links = "".join(
         f'<a href="{up}{h}"' + (' aria-current="page"' if h == current else "") + f">{n}</a>" for h, n in nav
     )
-    titular = cfg["titular_nombre"] or '<span class="todo">[TITULAR PENDIENTE]</span>'
-    nif = cfg["titular_nif"] or '<span class="todo">[NIF]</span>'
-    dire = cfg["titular_direccion"] or '<span class="todo">[DIRECCIÓN]</span>'
+    parts = [esc(x) for x in (cfg["titular_nombre"], cfg["titular_nif"], cfg["titular_direccion"]) if x]
+    contact = " · ".join(parts + [esc(cfg["contact_email"])])
     robots = "" if cfg["titular_nombre"] else '<meta name="robots" content="noindex,nofollow">'
     inner = f"""
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Source+Sans+3:wght@400;600;700&display=swap">
@@ -109,7 +108,7 @@ def page(rel, title, body, desc, current=""):
 <main><div class="wrap">{body}</div></main>
 <footer class="site"><div class="wrap">
 <span>Información orientativa. No sustituye a la ordenanza fiscal de cada ayuntamiento ni a la normativa vigente: consulta siempre la fuente oficial.</span>
-<span>Titular: {titular} · {nif} · {dire} · {esc(cfg['contact_email'])}</span>
+<span>Contacto: {contact}</span>
 </div></footer>"""
     if PREVIEW and rel == "index.html":
         return f'<title>{esc(title)}</title>\n<meta name="description" content="{esc(desc)}">{robots}' + inner

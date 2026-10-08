@@ -1,0 +1,147 @@
+{
+  "status": {
+    "coincide": "Las fuentes coinciden · falta leer la ordenanza",
+    "conflicto": "Las fuentes se contradicen",
+    "una": "Una sola fuente · por verificar",
+    "sin": "Sin dato fiable",
+    "porconfirmar": "Por confirmar"
+  },
+  "municipios": [
+    {
+      "id": "sevilla",
+      "name": "Sevilla",
+      "ibi": {
+        "h": "50 % de la cuota",
+        "d": "Durante tres periodos impositivos, en viviendas residenciales. Se solicita en la sede electrónica del Ayuntamiento (formulario OPAEF).",
+        "s": "coincide",
+        "pct": [
+          50,
+          50
+        ]
+      },
+      "icio": {
+        "h": "75 % de la cuota",
+        "d": "Para obras cuyo único objeto sea incorporar energía solar para autoconsumo. Un artículo antiguo hablaba del 30 %: hay que aclarar cuál rige.",
+        "s": "una",
+        "pct": [
+          75,
+          75
+        ]
+      },
+      "notes": [
+        "Xataka Home: indica el 50 % durante tres periodos impositivos siguientes a la puesta en funcionamiento.",
+        "Guía de un despacho de abogados (2026): confirma el 50 % en tres ejercicios y añade el 75 % en el ICIO y el trámite por OPAEF.",
+        "Energías Renovables (artículo antiguo): mencionaba el 30 % en el ICIO; probablemente desactualizado."
+      ]
+    },
+    {
+      "id": "malaga",
+      "name": "Málaga",
+      "ibi": {
+        "h": "15 % o 50 %: las fuentes no coinciden",
+        "d": "Xataka Home indica el 15 % durante un máximo de tres años desde el ejercicio posterior a la instalación, pidiéndolo antes del 1 de febrero. Una web de datos fiscales indica el 50 %.",
+        "s": "conflicto",
+        "pct": [
+          15,
+          50
+        ]
+      },
+      "icio": {
+        "h": "Sin dato fiable",
+        "d": "No se ha encontrado la bonificación del ICIO para energía solar en las fuentes consultadas.",
+        "s": "sin",
+        "pct": null
+      },
+      "notes": [
+        "Xataka Home: 15 % durante un máximo de tres años; solicitud antes del 1 de febrero para disfrutarla ese año.",
+        "Web de datos fiscales (guiafiscal.es): 50 % con una duración de tres a cinco años «habitual». No cita el artículo exacto.",
+        "Pendiente: leer el texto de la ordenanza fiscal nº 1 publicada en el BOP de Málaga."
+      ]
+    },
+    {
+      "id": "cordoba",
+      "name": "Córdoba",
+      "ibi": {
+        "h": "Hasta el 50 %, hasta 10 años",
+        "d": "La Voz de Córdoba (julio de 2026) lo sitúa en vivienda habitual y regularizada. Un informe de 2023 coincide. Una ordenanza del BOP de 2020 menciona cuatro años en un apartado de energía solar: revisar cuál está vigente.",
+        "s": "coincide",
+        "pct": [
+          50,
+          50
+        ]
+      },
+      "icio": {
+        "h": "95 % (2026) o 40 % (2023)",
+        "d": "La fuente más reciente indica el 95 %; el informe de 2023 indicaba el 40 %. Probable cambio de ordenanza: confirmar.",
+        "s": "conflicto",
+        "pct": [
+          40,
+          95
+        ]
+      },
+      "notes": [
+        "La Voz de Córdoba (15/07/2026): IBI hasta el 50 % durante diez años y ICIO del 95 % para la capital.",
+        "Interempresas (2023): colocaba a Córdoba la primera capital de provincia, con IBI del 50 % a diez años e ICIO del 40 %.",
+        "BOP de Córdoba (2020): texto con una bonificación de hasta el 50 % de cuatro años para energía solar; vigencia por comprobar."
+      ]
+    },
+    {
+      "id": "granada",
+      "name": "Granada",
+      "ibi": {
+        "h": "25 % (sin contrastar)",
+        "d": "Dato de una web fiscal. El Ayuntamiento tramitó cambios en las ordenanzas de IBI e ICIO para 2026 que suben algunos porcentajes de bonificación; no consta cuáles afectan a la energía solar.",
+        "s": "una",
+        "pct": [
+          25,
+          25
+        ]
+      },
+      "icio": {
+        "h": "Sin dato fiable",
+        "d": "La modificación de 2026 crea un supuesto de bonificación de hasta el 95 %, pero no se ha podido comprobar si incluye instalaciones solares.",
+        "s": "sin",
+        "pct": null
+      },
+      "notes": [
+        "Web de datos fiscales (guiafiscal.es): autoconsumo solar al 25 % en la ordenanza nº 3.",
+        "Ayuntamiento de Granada (transparencia): informe de Intervención sobre la modificación de las ordenanzas nº 3 y nº 4 para 2026.",
+        "Pendiente: leer el texto definitivo publicado en el BOP de Granada."
+      ]
+    },
+    {
+      "id": "almeria",
+      "name": "Almería",
+      "ibi": {
+        "h": "25 % o 50 %",
+        "d": "Una web fiscal indica el 25 %. Una noticia de 2013 indicaba el 50 % durante un máximo de tres años, con tope del 33 % del coste de la instalación. Posible dato desactualizado.",
+        "s": "conflicto",
+        "pct": [
+          25,
+          50
+        ]
+      },
+      "icio": {
+        "h": "Sin dato fiable",
+        "d": "No se ha encontrado la bonificación del ICIO para energía solar en las fuentes consultadas.",
+        "s": "sin",
+        "pct": null
+      },
+      "notes": [
+        "Web de datos fiscales (guiafiscal.es): 25 % en la ordenanza nº 2 del IBI de 2026.",
+        "Construible / Ecoticias (2013): aprobación del 50 % en el artículo 12 de la ordenanza nº 2, con duración máxima de tres años.",
+        "Pendiente: leer el texto vigente en el BOP de Almería."
+      ]
+    }
+  ],
+  "irpf": {
+    "h": "20 %, 40 % o 60 %",
+    "d": "Deducciones por mejora de la eficiencia energética de la vivienda, según el ahorro que se acredite. Fuentes del sector las dan vigentes hasta el 31 de diciembre de 2026: comprobar en la Agencia Tributaria.",
+    "s": "una"
+  },
+  "subv": {
+    "h": "Casi todas cerradas",
+    "d": "Las ayudas Next Generation ya no admiten solicitudes en la mayoría de comunidades. En Andalucía, el Plan Ecovivienda finalizó el 26 de diciembre de 2024; el estado de nuevas convocatorias está por confirmar.",
+    "s": "porconfirmar"
+  }
+}
